@@ -7,11 +7,11 @@ const Confirm = (props) => {
   function Continue(e) {
     e.preventDefault();
     // PROCESS FROM - SEND DATA TO API
-    this.props.nextStep();
+    return props.nextStep();
   }
   function Back(e) {
     e.preventDefault();
-    this.props.previousStep();
+    return props.previousStep();
   }
 
   return (
@@ -20,12 +20,21 @@ const Confirm = (props) => {
         <AppBar title="Confirm user data" />
         <br />
         <List>
-          <ListItem primaryText="First Name" secondaryText={props.firstName} />
-          <ListItem primaryText="lastName" secondaryText={props.lastName} />
-          <ListItem primaryText="email" secondaryText={props.email} />
-          <ListItem primaryText="occupation" secondaryText={props.occupation} />
-          <ListItem primaryText="city" secondaryText={props.city} />
-          <ListItem primaryText="bio" secondaryText={props.bio} />
+          <ListItem
+            primaryText="First Name"
+            secondaryText={props.values.firstName}
+          />
+          <ListItem
+            primaryText="lastName"
+            secondaryText={props.values.lastName}
+          />
+          <ListItem primaryText="email" secondaryText={props.values.email} />
+          <ListItem
+            primaryText="occupation"
+            secondaryText={props.values.occupation}
+          />
+          <ListItem primaryText="city" secondaryText={props.values.city} />
+          <ListItem primaryText="bio" secondaryText={props.values.bio} />
         </List>
         <RaisedButton
           label="Confirm & Continue"

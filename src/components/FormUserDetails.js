@@ -10,7 +10,6 @@ const FormUserDetails = (props) => {
     e.preventDefault();
     return props.nextStep();
   }
-  // const { values, handleChange } = this.props;
 
   return (
     <MuiThemeProvider>

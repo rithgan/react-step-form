@@ -6,11 +6,11 @@ import RaisedButton from "material-ui/RaisedButton";
 const FormPersonalDetails = (props) => {
   function Continue(e) {
     e.preventDefault();
-    this.props.nextStep();
+    return props.nextStep();
   }
   function Back(e) {
     e.preventDefault();
-    this.props.previousStep();
+    return props.previousStep();
   }
 
   return (
